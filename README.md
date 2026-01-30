@@ -88,7 +88,7 @@ nodejs-rds-alb-project
 - No public IP
 
 ### Install Node.js
-```bash
+bash
 sudo yum update -y
 sudo yum install nodejs -y
 node -v
@@ -97,8 +97,9 @@ npm -v
 ### How Express.js Was Installed
 After initializing the Node.js project, Express was installed using npm:
 
-```bash
-npm install express
+bash
+npm init -y
+npm install express mysql2 body-parser
 
 ### Why Express.js is Used
 
