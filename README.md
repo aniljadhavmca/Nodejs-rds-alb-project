@@ -109,3 +109,36 @@ npm install express
 
 ## Run
 sudo node app.js
+
+### Steps to Create RDS MySQL Instance
+AWS Console → RDS → Create database
+Engine: MySQL
+Template: Free Tier / Dev
+DB Identifier: devdb
+Username: admin
+Connectivity:
+VPC: Project VPC
+Public access: ❌ No
+Subnet group: Private subnets
+Security Group:
+Allow MySQL (3306) from EC2 SG
+Create database
+After creation:
+Go to RDS → Databases
+Copy the Endpoint
+
+### Connecting to RDS from EC2
+Install MySQL client if not present:
+
+sudo yum install mysql -y
+mysql -h <RDS-ENDPOINT> -u admin -p
+
+CREATE DATABASE testdb;
+USE testdb;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100)
+);
+
