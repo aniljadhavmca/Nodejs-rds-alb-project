@@ -88,18 +88,15 @@ nodejs-rds-alb-project
 - No public IP
 
 ### Install Node.js
-```md
-sudo yum update -y
-sudo yum install nodejs -y
-node -v
-npm -v
+- sudo yum update -y
+- sudo yum install nodejs -y
+- node -v
+- npm -v
 
 ### How Express.js Was Installed
 After initializing the Node.js project, Express was installed using npm:
-
-```md
-npm init -y
-npm install express mysql2 body-parser
+- npm init -y
+- npm install express mysql2 body-parser
 
 ### Why Express.js is Used
 
@@ -113,28 +110,27 @@ sudo node app.js
 
 ## Steps to Create RDS MySQL Instance
 
-AWS Console → RDS → Create database
-```md
-Engine: MySQL
-Template: Free Tier / Dev
-DB Identifier: devdb
-Username: admin
-Connectivity:
-VPC: Project VPC
-Public access: ❌ No
-Subnet group: Private subnets
-Security Group:
-Allow MySQL (3306) from EC2 SG
-Create database
-After creation:
-Go to RDS → Databases
-Copy the Endpoint
+- AWS Console → RDS → Create database
+- Engine: MySQL
+- Template: Free Tier / Dev
+- DB Identifier: devdb
+- Username: admin
+- Connectivity:
+- VPC: Project VPC
+- Public access: ❌ No
+- Subnet group: Private subnets
+- Security Group:
+- Allow MySQL (3306) from EC2 SG
+- Create database
+- After creation:
+- Go to RDS → Databases
+- Copy the Endpoint
 
 ### Connecting to RDS from EC2
 Install MySQL client if not present:
 
-sudo yum install mysql -y
-mysql -h <RDS-ENDPOINT> -u admin -p
+- sudo yum install mysql -y
+- mysql -h <RDS-ENDPOINT> -u admin -p
 
 CREATE DATABASE testdb;
 USE testdb;
