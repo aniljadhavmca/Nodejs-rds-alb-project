@@ -95,7 +95,6 @@ node -v
 npm -v
 
 ### How Express.js Was Installed
-
 After initializing the Node.js project, Express was installed using npm:
 
 ```bash
@@ -109,5 +108,4 @@ npm install express
 - Widely used in production and industry-standard
 
 ## Run
-npm install
 sudo node app.js
