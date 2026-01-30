@@ -110,7 +110,7 @@ npm install express
 ## Run
 sudo node app.js
 
-### Steps to Create RDS MySQL Instance
+## Steps to Create RDS MySQL Instance
 AWS Console → RDS → Create database
 Engine: MySQL
 Template: Free Tier / Dev
